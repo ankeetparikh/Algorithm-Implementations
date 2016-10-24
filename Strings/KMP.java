@@ -41,7 +41,7 @@ public class KMP {
         for(int q=1; q<m; q++)
         {
             while(k>0 && P[k] != P[q]){
-                k = pf[k];
+                k = pf[k-1];
             }
             if(P[k] == P[q]) k++;
             pf[q] = k;
@@ -53,9 +53,9 @@ public class KMP {
 
     public static void main(String[] args)
     {
-        char[] T = "canyouhearme".toCharArray();
-        char[] P = "nyou".toCharArray();
-
+        char[] T = "aafafaasf".toCharArray();
+        char[] P = "aaf".toCharArray();
+        System.out.println(Arrays.toString(preffunc(P)));
         printocc(T,P);
     }
 
