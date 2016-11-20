@@ -10,6 +10,11 @@ package Graphs;
  * distance between 2 nodes in the graph.
  *
  * the graph {1 ->2 , 2->3} has a diameter of 3
+ *
+ * One limitation of this algorithm is it does not
+ * work if there are no edges in the graph.
+ * In that case, the diameter is 1 if the graph is
+ * nonempty.
  */
 
 import java.util.*;
@@ -33,8 +38,13 @@ public class TreeDiameter {
             if(g[i]!=null && g[i].size() > 1)
                 rootc = i;
 
-        dfs(rootc);
-        return diam[rootc];
+        if(rootc != -1) {
+            dfs(rootc);
+            return diam[rootc];
+        }
+        else{
+            return 0; // perhaps the tree is empty
+        }
     }
 
     public static void dfs(int curr){
