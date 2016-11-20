@@ -36,7 +36,7 @@ public class FenwickTree {
 
     public static void main(String[] args)
     {
-        int n = 500000;
+        int n = 5000000;
         build(n);
         for(int i=0; i<n; i++) add(i,i+1);
         System.out.println(sum(n-1));

@@ -28,7 +28,6 @@ public class ExtendedEuclidean {
             yn = yp - yn * q;
             yp = temp;
 
-
         }
         return new long[]{xp, yp};
     }

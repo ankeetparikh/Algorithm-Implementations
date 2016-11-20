@@ -53,8 +53,8 @@ public class KMP {
 
     public static void main(String[] args)
     {
-        char[] T = "aafafaasf".toCharArray();
-        char[] P = "aaf".toCharArray();
+        char[] T = "whatwhatwhat".toCharArray();
+        char[] P = "hat".toCharArray();
         System.out.println(Arrays.toString(preffunc(P)));
         printocc(T,P);
     }

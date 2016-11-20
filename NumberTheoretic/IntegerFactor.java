@@ -31,7 +31,7 @@ public class IntegerFactor {
 
     public static void main(String[] args)
     {
-        factor(14);
+        factor(100000000000L);
     }
 
 }
