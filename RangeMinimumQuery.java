@@ -19,6 +19,7 @@ public class RangeMinimumQuery {
     public int[] a = null;
     public int[] st = null;
     public int inf = Integer.MAX_VALUE;
+
     public RangeMinimumQuery(int[] a)
     {
         this.a = a;

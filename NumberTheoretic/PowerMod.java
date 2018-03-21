@@ -5,14 +5,14 @@ package NumberTheoretic;
  */
 public class PowerMod {
 
-    //returns a^b modulo c
+    //returns a^b modulo m
     public static long powmod(long a, long b, long m)
     {
         if(b == 0) return 1;
         long c = powmod(a, b/2, m);
-        c = c * c%m;
-        if(b%2 == 1) c = c*a%m;
-        return c%m;
+        c = c * c % m;
+        if(b%2 == 1) c = c * a % m;
+        return c;
     }
 
     public static long powmoditer(long a, long b, long m)

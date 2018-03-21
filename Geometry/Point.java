@@ -23,4 +23,8 @@ public class Point {
         y=yc;
     }
 
+    public String toString(){
+        return "( " + x + " , " + y + " )";
+    }
+
 }

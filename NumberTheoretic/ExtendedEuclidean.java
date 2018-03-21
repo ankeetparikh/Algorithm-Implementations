@@ -3,11 +3,12 @@ package NumberTheoretic; /**
  */
 import java.util.Arrays;
 public class ExtendedEuclidean {
-    // returns integers x and y such that
-    // a*x + b*y = gcd(a,b)
-    // array returned: {x, y}
+    // sets integers x, y, g such that
+    // a*x + b*y = g
+    // where g = gcd(a,b);
 
-    public static long[] ExtendedEuclidean(long a, long b)
+	long x, y, g;	
+    void ExtendedEuclidean(long a, long b)
     {
         long xp = 1, xn = 0;
         long yp = 0, yn = 1;
@@ -29,14 +30,18 @@ public class ExtendedEuclidean {
             yp = temp;
 
         }
-        return new long[]{xp, yp};
+        x = xp;
+        y = yp;
+        g = a*x+b*y;
     }
 
     public static void main(String[] args)
     {
         long a = 3023492384l;
         long b = 9602349l;
-        System.out.println(Arrays.toString(ExtendedEuclidean(a, b)));
+        ExtendedEuclidean eed = new ExtendedEuclidean();
+        eed.ExtendedEuclidean(a,b);
+    	System.out.println(eed.x + " " + eed.y + " " + eed.g);
     }
 
 }

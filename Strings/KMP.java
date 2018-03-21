@@ -1,4 +1,4 @@
-package Strings;
+pckage Strings;
 
 import java.util.Arrays;
 
@@ -48,7 +48,6 @@ public class KMP {
 
         }
         return pf;
-
     }
 
     public static void main(String[] args)
